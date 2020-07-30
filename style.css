@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  background-color: #222831;
+}
+header {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ececec;
+  font-family: 'Lobster', cursive;
+  font-size: xx-large;
+}
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75vh;
+}
+#stars path {
+  transform-origin: bottom;
+  animation: stars-move 10s linear alternate infinite;
+}
+
+#wholeUfo {
+  animation: ufo-light 3s linear alternate;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+#ufoLight {
+  animation: ufo-light 1s linear alternate 4s;
+  transform-origin: top;
+  transform-box: fill-box;
+  display: none;
+}
+#ghostIn {
+  display: none;
+  animation: ufo-light 0.5s ease-out forwards 3.5s;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+#ghostOut {
+  animation: ghost-move 3.5s forwards ease-out;
+}
+#mouth {
+  opacity: 0;
+  transition: 1s ease-out;
+}
+#g-eyes {
+  animation: eyes 1s linear alternate 4;
+}
+#airBubbles {
+  opacity: 0;
+  transition: 1s;
+}
+@keyframes ghost-top {
+    from {
+      transform: rotateX(0deg);
+    }
+    to {
+      transform: rotateX(25deg);
+    }
+  }
+@keyframes eyes-top {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(12deg);
+  }
+}
+@keyframes eyes {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(15deg);
+  }
+}
+@keyframes ghost-move {
+  from {
+    transform: translateX(-150px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes ufo-light {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes stars-move {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(10deg);
+  }
+}
