@@ -36,14 +36,14 @@ svg {
 }
 
 #ufoLight {
-  animation: ufo-light 1s linear alternate 4s;
   transform-origin: top;
   transform-box: fill-box;
   display: none;
+  animation: ufo-light 1s linear alternate;
 }
 #ghostIn {
   display: none;
-  animation: ufo-light 0.5s ease-out forwards 3.5s;
+  animation: ufo-light 0.5s ease-out forwards;
   transform-origin: bottom;
   transform-box: fill-box;
 }
@@ -62,13 +62,13 @@ svg {
   transition: 1s;
 }
 @keyframes ghost-top {
-    from {
-      transform: rotateX(0deg);
-    }
-    to {
-      transform: rotateX(25deg);
-    }
+  from {
+    transform: rotateX(0deg);
   }
+  to {
+    transform: rotateX(25deg);
+  }
+}
 @keyframes eyes-top {
   from {
     transform: rotateX(0deg);

@@ -8,7 +8,6 @@
   </head>
   <body>
     <header>UFO Animation</header>
-    <embed src="./ufo_tone_wav.wav" hidden="true" />
     <svg
       width="840"
       height="727"
@@ -325,6 +324,12 @@
         </clipPath>
       </defs>
     </svg>
+    <!-- <embed src="./ufo_tone_wav.wav" hidden="true" /> -->
+    <div class="sound">
+      <audio controls autoplay hidden>
+        <source src="./ufo_tone_wav.wav" type="audio/wav" />
+      </audio>
+    </div>
 
     <script src="./script.js"></script>
   </body>
